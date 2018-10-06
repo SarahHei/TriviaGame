@@ -22,6 +22,12 @@
     margin-left: 50px;
 }
 
+#correctResponses {
+    font-weight: bold;
+    font-size: 15pt;
+    margin-left: 50px;
+}
+
 #questions {
     font-weight: bold;
     font-size: 20pt;
@@ -32,4 +38,8 @@
     font-weight: bold;
     font-size: 20pt;
     margin: 20px;
+}
+
+#start {
+    margin-left: 500px;
 }
