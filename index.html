@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body background="assets/images/paleo.png">
+    <div class="container">
+        <h4 id="intro">Welcome to Archaeology Trivia!</h4>
+        <p id="instructions"> Your goal: answer 5 questions within 30 seconds to win.</p>
+        <button id="start">Start</button>
+        <div class="row" id="timer"><p id="countdown">Countdown: <span class="countdown">30</span> Seconds</p></div>
+        <div class="row" id="questions"><p>Your question is: </p></div>
+    
+        <div class="choices" id="questionChoices"><p>Your choices are:</p></div>
+        
+    </div>
+
+
+    <script style="text/javascript" src="assets/javascript/app.js" ></script>
+</body>
+
+<!--
+* You'll create a trivia form with multiple choice or true/false options (your choice).
+
+* The player will have a limited amount of time to finish the quiz. 
+
+  * The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
+
+* Don't let the player pick more than one answer per question.
+
+* Don't forget to include a countdown timer.
+-->
