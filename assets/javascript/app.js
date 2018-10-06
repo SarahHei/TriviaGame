@@ -1,10 +1,9 @@
 $(document).ready(function() {
 
-var questions;
+var questions = [];
 var timer = 30;
-var interval; 
+var interval = 1000; 
 var correctResponses = 0; 
-var clickCounter = 0; 
 
 var questions = [
     {
@@ -44,23 +43,22 @@ $("#start").on('click', function() {
         $("#timer").text(timer);
         if(timer === 0){
             timeOut();
-        };
-        $("#questions").append("questions");
-        console.log("questions");
+        }
+        else {
+            $("#questions").text("questions");
+            console.log("questions");
+        }
     })
 
 function displayChoices(arr){
     for (var i = 0; i < arr.length; i++){
-      var possibleAnswersDiv = $("<div id='questionChoices'>");
+      var possibleAnswersDiv = $("#questionChoices");
       possibleAnswersDiv.text(arr[i]);
-      $("#questionChoices").append(possibleAnswersDiv);
+      $("#questionChoices").text(possibleAnswersDiv);
     }
 } 
+$('.reset-button').on('click', function(){
+    reset();
+});
 
-function stop() {
-        clearInterval(interval);
-        questionProgress++;
-        setTimeout(nextQuestion, 4000);
-    }
-
-}
+})
