@@ -2,7 +2,6 @@
     position: relative;
     margin-left: 100px;
     margin-top: 100px;
-    z-index: -1;
     background: white;
 }
 
@@ -45,6 +44,12 @@
 }
 
 #reset {
-    margin-left: 500px;
+    margin-left: 100px;
     margin-bottom: 10px;
+}
+
+#next {
+    margin-left: 400px;
+    margin-bottom: 10px;
+}
 }

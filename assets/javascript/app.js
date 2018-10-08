@@ -2,8 +2,30 @@ $(document).ready(function() {
 
 var questions = [];
 var timer = 30;
-var interval = 1000; 
+var intervalId; 
 var correctResponses = 0; 
+
+function run() {
+    clearInterval(intervalId);
+    intervalId = setInterval(decrement, 1000);
+  }
+
+  function decrement() {
+    timer--;
+    $(".countdown").html("<p>" + timer + "<p>");
+    if (timer=== 0) {
+      stop();
+      alert("Time Up!");
+    }
+  }
+
+  function stop() {
+    clearInterval(intervalId);
+  }
+
+  
+  // radio buttons
+  // submit function
 
 var questions = [
     {
@@ -38,27 +60,22 @@ var questions = [
     
 ];
 
+// submit button click
+
 $("#start").on('click', function() {
-        timer--;
-        $("#timer").text(timer);
-        if(timer === 0){
-            timeOut();
-        }
-        else {
-            $("#questions").text("questions");
-            console.log("questions");
-        }
+    run();
     })
 
-function displayChoices(arr){
-    for (var i = 0; i < arr.length; i++){
-      var possibleAnswersDiv = $("#questionChoices");
-      possibleAnswersDiv.text(arr[i]);
-      $("#questionChoices").text(possibleAnswersDiv);
-    }
-} 
-$('.reset-button').on('click', function(){
+$("#reset").on('click', function(){
     reset();
 });
+
+$("#questions").html(questions.question1);
+$("#option1").append(questions.q1PossibleAnswer[0]);
+
+if (questions.question1) {
+    q1PossibleAnswers===q1CorrectAnswers;
+    alert("That is correct!");
+  }
 
 })
