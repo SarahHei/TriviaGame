@@ -57,11 +57,12 @@ $("#reset").on('click', function(){
     $("#option1").on("click", function () {
         if (q1PossibleAnswers === q1CorrectAnswer) {
             $("#questions").text("Your question is: " + questionArray.question2);
-            $("#option1").append(questionArray.q2PossibleAnswers);
-            $("#option2").append(questionArray.q2PossibleAnswers);
-            $("#option3").append(questionArray.q2PossibleAnswers);
-            $("#option4").append(questionArray.q2PossibleAnswers);
+            $("#option1").append(questionArray.q2PossibleAnswers[0]);
+            $("#option2").append(questionArray.q2PossibleAnswers[1]);
+            $("#option3").append(questionArray.q2PossibleAnswers[2]);
+            $("#option4").append(questionArray.q2PossibleAnswers[3]);
             correctResponses++;
+            $("#correctResponses").text(correctResponses);
         }
         else {
             alert("Try again!");
@@ -71,10 +72,10 @@ $("#reset").on('click', function(){
     $("#option2").on("click", function () {
         if (q2PossibleAnswers === q2CorrectAnswer) {
             $("#questions").text("Your question is: " + questionArray.question3);
-            $("#option1").append(questionArray.q3PossibleAnswers);
-            $("#option2").append(questionArray.q3PossibleAnswers);
-            $("#option3").append(questionArray.q3PossibleAnswers);
-            $("#option4").append(questionArray.q3PossibleAnswers);
+            $("#option1").append(questionArray.q3PossibleAnswers[0]);
+            $("#option2").append(questionArray.q3PossibleAnswers[1]);
+            $("#option3").append(questionArray.q3PossibleAnswers[2]);
+            $("#option4").append(questionArray.q3PossibleAnswers[3]);
             correctResponses++;
         } else {
             alert("Try again!");
@@ -84,10 +85,10 @@ $("#reset").on('click', function(){
     $("#option3").on("click", function () {
         if (q3PossibleAnswers === q3CorrectAnswer) {
             $("#questions").text("Your question is: " + questionArray.question4);
-            $("#option1").append(questionArray.q4PossibleAnswers);
-            $("#option2").append(questionArray.q4PossibleAnswers);
-            $("#option3").append(questionArray.q4PossibleAnswers);
-            $("#option4").append(questionArray.q4PossibleAnswers);
+            $("#option1").append(questionArray.q4PossibleAnswers[0]);
+            $("#option2").append(questionArray.q4PossibleAnswers[1]);
+            $("#option3").append(questionArray.q4PossibleAnswers[2]);
+            $("#option4").append(questionArray.q4PossibleAnswers[3]);
             correctResponses++;
         } else {
             alert("Try again!");
@@ -97,10 +98,10 @@ $("#reset").on('click', function(){
     $("#option4").on("click", function () {
         if (q4PossibleAnswers === q4CorrectAnswer) {
             $("#questions").text("Your question is: " + questionArray.question5);
-            $("#option1").append(questionArray.q5PossibleAnswers);
-            $("#option2").append(questionArray.q5PossibleAnswers);
-            $("#option3").append(questionArray.q5PossibleAnswers);
-            $("#option4").append(questionArray.q5PossibleAnswers);
+            $("#option1").append(questionArray.q5PossibleAnswers[0]);
+            $("#option2").append(questionArray.q5PossibleAnswers[1]);
+            $("#option3").append(questionArray.q5PossibleAnswers[2]);
+            $("#option4").append(questionArray.q5PossibleAnswers[3]);
             correctResponses++;
         } else {
             alert("Try again!");
