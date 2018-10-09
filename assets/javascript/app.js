@@ -55,7 +55,7 @@ $("#reset").on('click', function(){
     $("#option4").append(questionArray.q1PossibleAnswers[3]);
 
     $("#option1").on("click", function () {
-        if (q1PossibleAnswers === q1CorrectAnswer) {
+        if (questionArray.q1PossibleAnswers === questionArray.q1CorrectAnswer) {
             $("#questions").text("Your question is: " + questionArray.question2);
             $("#option1").append(questionArray.q2PossibleAnswers[0]);
             $("#option2").append(questionArray.q2PossibleAnswers[1]);
@@ -70,7 +70,7 @@ $("#reset").on('click', function(){
     })
 
     $("#option2").on("click", function () {
-        if (q2PossibleAnswers === q2CorrectAnswer) {
+        if (questionArray.q2PossibleAnswers === questionArray.q2CorrectAnswer) {
             $("#questions").text("Your question is: " + questionArray.question3);
             $("#option1").append(questionArray.q3PossibleAnswers[0]);
             $("#option2").append(questionArray.q3PossibleAnswers[1]);
@@ -83,7 +83,7 @@ $("#reset").on('click', function(){
     })
 
     $("#option3").on("click", function () {
-        if (q3PossibleAnswers === q3CorrectAnswer) {
+        if (questionArray.q3PossibleAnswers === questionArray.q3CorrectAnswer) {
             $("#questions").text("Your question is: " + questionArray.question4);
             $("#option1").append(questionArray.q4PossibleAnswers[0]);
             $("#option2").append(questionArray.q4PossibleAnswers[1]);
@@ -96,7 +96,7 @@ $("#reset").on('click', function(){
     })
 
     $("#option4").on("click", function () {
-        if (q4PossibleAnswers === q4CorrectAnswer) {
+        if (questionArray.q4PossibleAnswers === questionArray.q4CorrectAnswer) {
             $("#questions").text("Your question is: " + questionArray.question5);
             $("#option1").append(questionArray.q5PossibleAnswers[0]);
             $("#option2").append(questionArray.q5PossibleAnswers[1]);
@@ -108,7 +108,7 @@ $("#reset").on('click', function(){
                 }
     })
 
-    if (q5PossibleAnswers === q5CorrectAnswer) {
+    if (questionArray.q5PossibleAnswers === questionArray.q5CorrectAnswer) {
         correctResponses++;
     }
         else {
