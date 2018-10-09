@@ -66,7 +66,7 @@ $("#reset").on('click', function(){
         else {
             alert("Try again!");
             }
-    }
+    })
 
     $("#option2").on("click", function () {
         if (q2PossibleAnswers === q2CorrectAnswer) {
@@ -79,7 +79,7 @@ $("#reset").on('click', function(){
         } else {
             alert("Try again!");
                 }
-    }
+    })
 
     $("#option3").on("click", function () {
         if (q3PossibleAnswers === q3CorrectAnswer) {
@@ -92,7 +92,7 @@ $("#reset").on('click', function(){
         } else {
             alert("Try again!");
                 }
-    }
+    })
 
     $("#option4").on("click", function () {
         if (q4PossibleAnswers === q4CorrectAnswer) {
@@ -105,7 +105,7 @@ $("#reset").on('click', function(){
         } else {
             alert("Try again!");
                 }
-    }
+    })
 
     if (q5PossibleAnswers === q5CorrectAnswer) {
         correctResponses++;
