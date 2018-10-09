@@ -49,27 +49,35 @@ $("#reset").on('click', function(){
 });
 
     $("#questions").text("Your question is: " + questionArray.question1);
+    let option1 = questionArray.q1PossibleAnswers[0];
     $("#option1").append(questionArray.q1PossibleAnswers[0]);
+    let option2 = questionArray.q1PossibleAnswers[1];
     $("#option2").append(questionArray.q1PossibleAnswers[1]);
+    let option3 = questionArray.q1PossibleAnswers[2];
     $("#option3").append(questionArray.q1PossibleAnswers[2]);
+    let option4 = questionArray.q1PossibleAnswers[3];
     $("#option4").append(questionArray.q1PossibleAnswers[3]);
-
+    
     $("#option1").on("click", function () {
-        if (questionArray.q1PossibleAnswers === questionArray.q1CorrectAnswer) {
+       if (option1 === q1CorrectAnswer) {
             $("#questions").text("Your question is: " + questionArray.question2);
             $("#option1").append(questionArray.q2PossibleAnswers[0]);
+            let option1 = questionArray.q2PossibleAnswers[0];
             $("#option2").append(questionArray.q2PossibleAnswers[1]);
+            let option2 = questionArray.q2PossibleAnswers[1];
             $("#option3").append(questionArray.q2PossibleAnswers[2]);
+            let option3 = questionArray.q2PossibleAnswers[2];
             $("#option4").append(questionArray.q2PossibleAnswers[3]);
+            let option4 = questionArray.q2PossibleAnswers[3];
             correctResponses++;
             $("#correctResponses").text(correctResponses);
         }
         else {
             alert("Try again!");
             }
-    })
-
-    $("#option2").on("click", function () {
+        })
+    
+   $("#option2").on("click", function () {
         if (questionArray.q2PossibleAnswers === questionArray.q2CorrectAnswer) {
             $("#questions").text("Your question is: " + questionArray.question3);
             $("#option1").append(questionArray.q3PossibleAnswers[0]);
@@ -114,5 +122,4 @@ $("#reset").on('click', function(){
         else {
             alert("Try again!");
         }
-
 })
