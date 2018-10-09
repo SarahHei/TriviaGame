@@ -9,7 +9,7 @@ function run() {
     intervalId = setInterval(decrement, 1000);
   }
 
-  function decrement() {
+function decrement() {
     timer--;
     $(".countdown").html("<p>" + timer + "<p>");
     if (timer=== 0) {
@@ -18,9 +18,17 @@ function run() {
     }
   }
 
-  function stop() {
+function stop() {
     clearInterval(intervalId);
   }
+  
+$("#start").on('click', function() {
+    run();
+    })
+
+$("#reset").on('click', function(){
+    run();
+})
 
 var questionArray = {
         "question1": "Who was the first known archaeologist?",
@@ -40,13 +48,7 @@ var questionArray = {
         "q5CorrectAnswer": "Mission Impossible"
     }
 
-$("#start").on('click', function() {
-    run();
-    })
 
-$("#reset").on('click', function(){
-    reset();
-});
 
     $("#questions").text("Your question is: " + questionArray.question1);
     let option1 = questionArray.q1PossibleAnswers[0];
@@ -59,7 +61,7 @@ $("#reset").on('click', function(){
     $("#option4").append(questionArray.q1PossibleAnswers[3]);
     
     $("#option1").on("click", function () {
-       if (option1 === q1CorrectAnswer) {
+       if (option1 === questionArray.q1CorrectAnswer) {
             $("#questions").text("Your question is: " + questionArray.question2);
             $("#option1").append(questionArray.q2PossibleAnswers[0]);
             let option1 = questionArray.q2PossibleAnswers[0];
