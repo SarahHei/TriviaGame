@@ -10,34 +10,55 @@
 <body background="assets/images/paleo.png">
     <div class="container">
         <h4 id="intro">Welcome to Archaeology Trivia!</h4>
-        <p id="instructions"> Your goal: answer 5 questions within 30 seconds to win.</p>
+            <p id="instructions"> Your goal: answer 5 questions within 30 seconds to win.</p>
         <button id="start">Start</button>
-        <div id="timer"><p id="countdown">Countdown: <span class="countdown">30</span> Seconds</p></div>
-        <div id="correctResponses"><p>Number correct: </p></div>
-        <div id="questions"></div>
-        <div id="questionChoices"><p>Your choices are:</p></div>
-        <button id="option1">Option 1: </button>
-        <button id="option2">Option 2: </button>
-        <button id="option3">Option 3: </button>
-        <button id="option4">Option 4: </button>
         
-        <!--<div class="radio">
-            <label><input type="radio" id="option1" name="optradio" checked ></label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="optradio" id="option2"></label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="optradio" id="option3"></label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="optradio" id="option4"></label>
-          </div>
-        -->
+        <div id="timer"><p id="countdown">Countdown: <span class="countdown">30</span> Seconds</p></div>
 
-         <div>
-                <button id="reset">Reset</button>
-         </div>
+        <div id="correctResponses"><p>Number correct: </p></div>
+        
+        <div id="questions"></div>
+        
+        <div id="questionChoices"><p>Your choices are:</p></div>
+        
+        <div id="form">
+            <form>
+                <div>
+                    <input type="radio" id="radioButton1"
+                    name="questionOptions" value="options">
+                </div>
+                <div>
+                    <input type="radio" id="radioButton2"
+                        name="questionOptions" value="options">
+                </div>
+                 <div>
+                    <input type="radio" id="radioButton3"
+                    name="questionOptions" value="options">
+                </div>
+                <div>
+                    <input type="radio" id="radioButton4"
+                    name="questionOptions" value="options">
+                </div>
+
+            </form>
+
+        <div>
+            <button id="reset">Reset</button>
+        </div>
+
+        </div>
+        
+        <!--
+<button class="button" id="option1"></button>
+        <button class="button" id="option2"></button>
+        <button class="button" id="option3"></button>
+        <button class="button" id="option4"></button>
+        <form>
+
+            <div>
+          <button id="reset">Reset</button>
+        </div>
+        -->
 
     </div>
 
