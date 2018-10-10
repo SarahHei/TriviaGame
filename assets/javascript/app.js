@@ -79,8 +79,9 @@ var showMeQuestions = function() {
 }
     
 for (var j = 0; j < 5; j++) {
-    if ($("#radioButton").questionArray[i].possibleAnswers[j].checked) === questionArray[i].correctAnswer {
+    if $(input:radio [questionArray[i].possibleAnswers[j]].checked) === (questionArray[i].correctAnswer) {
         correctResponses++;
+    $ ("#correctResponses").text(correctResponses);
     } else {
         alert("Sorry, try again!");
     }
