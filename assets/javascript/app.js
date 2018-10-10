@@ -3,6 +3,7 @@ $(document).ready(function() {
 var timer = 30;
 var intervalId; 
 var correctResponses = 0;
+
 function run() {
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
@@ -62,7 +63,7 @@ var questionArray = [
     }
 ]
 
-var showMeQuestions = function() {
+function showMeQuestions() {
     for (var i = 0; i <5; i++) {
         $("#questions").text("Your question is: " + questionArray[i].question);
         $("#radioButton1").text(questionArray[i].possibleAnswers[0]);
@@ -70,13 +71,14 @@ var showMeQuestions = function() {
         $("#radioButton3").text(questionArray[i].possibleAnswers[2]);
         $("#radioButton4").text(questionArray[i].possibleAnswers[3]);
     }
-    
+    showMeQuestions();
+}  
 /*
     for (var j = 0; j<= 3; j++) {
         
         }  
 */   
-}
+
     
 for (var j = 0; j < 5; j++) {
     if $(input:radio [questionArray[i].possibleAnswers[j]].checked) === (questionArray[i].correctAnswer) {
