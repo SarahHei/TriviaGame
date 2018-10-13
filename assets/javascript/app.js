@@ -4,6 +4,7 @@ var timer = 30;
 var intervalId; 
 var correctResponses = 0;
 
+
 function run() {
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
@@ -35,6 +36,9 @@ $("#reset").on('click', function(){
 //this is the array containing 5 objects; each object contains a question, four possible answers, and a correct answer
 //position i in the array refers to each object; thus [0] is object 1, etc.
 //each object contains an array for possible answers; position [j] refers to items in this array
+
+var questionProgress = 0;
+
 var questionArray = [
     {
         question: "Who was the first known archaeologist?",
@@ -64,28 +68,30 @@ var questionArray = [
 ]
 
 function showMeQuestions() {
-    for (var i = 0; i <5; i++) {
-        $("#questions").text("Your question is: " + questionArray[0].question);
-        $("#button1").text(questionArray[0].possibleAnswers[0]);
-        $("#radioButton1").attr("data", questionArray[0].possibleAnswers[0]);
-        $("#button2").text(questionArray[0].possibleAnswers[1]);
-        $("#radioButton2").attr("data", questionArray[0].possibleAnswers[1]);
-        $("#button3").text(questionArray[0].possibleAnswers[2]);
-        $("#radioButton3").attr("data", questionArray[0].possibleAnswers[2]);
-        $("#button4").text(questionArray[0].possibleAnswers[3]);
-        $("#radioButton4").attr("data", questionArray[0].possibleAnswers[3]);
-    }
+        $("#questions").text("Your question is: " + questionArray[questionProgress].question);
+        $("#button1").text(questionArray[questionProgress].possibleAnswers[0]);
+        $("#radioButton1").attr("data-name", questionArray[questionProgress].possibleAnswers[0]);
+        $("#button2").text(questionArray[questionProgress].possibleAnswers[1]);
+        $("#radioButton2").attr("data-name", questionArray[questionProgress].possibleAnswers[1]);
+        $("#button3").text(questionArray[questionProgress].possibleAnswers[2]);
+        $("#radioButton3").attr("data-name", questionArray[questionProgress].possibleAnswers[2]);
+        $("#button4").text(questionArray[questionProgress].possibleAnswers[3]);
+        $("#radioButton4").attr("data-name", questionArray[questionProgress].possibleAnswers[3]);
 }  
 //this has to be outside the function
 showMeQuestions();
 
 // for (var j = 0; j < 4; j++) {
     $(".questionButtons").on("click", function() {
-        let userGuess = $(this).text();
+        let userGuess = $(this).data("name");
         console.log(event);
-        if (userGuess === (questionArray[0].correctAnswer)) {
+        if (userGuess === (questionArray[questionProgress].correctAnswer)) {
             correctResponses++;
-        $("#correctResponses").text(correctResponses);
+        alert("Good job!");
+        $("#correctResponses").text("Your correct responses are " + correctResponses);
+        questionProgress++;
+        showMeQuestions();
+        $(this).prop("checked", false);
         } 
         else {
             alert("Sorry, try again!");
