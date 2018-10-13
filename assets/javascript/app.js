@@ -65,115 +65,30 @@ var questionArray = [
 
 function showMeQuestions() {
     for (var i = 0; i <5; i++) {
-        $("#questions").text("Your question is: " + questionArray[i].question);
-        $("#radioButton1").text(questionArray[i].possibleAnswers[0]);
-        $("#radioButton2").text(questionArray[i].possibleAnswers[1]);
-        $("#radioButton3").text(questionArray[i].possibleAnswers[2]);
-        $("#radioButton4").text(questionArray[i].possibleAnswers[3]);
+        $("#questions").text("Your question is: " + questionArray[0].question);
+        $("#button1").text(questionArray[0].possibleAnswers[0]);
+        $("#button1").attr("data", questionArray[0].possibleAnswers[0]);
+        $("#button2").text(questionArray[0].possibleAnswers[1]);
+        $("#button3").text(questionArray[0].possibleAnswers[2]);
+        $("#button3").attr("data", questionArray[0].possibleAnswers[2]);
+        $("#button4").text(questionArray[0].possibleAnswers[3]);
     }
-    showMeQuestions();
 }  
-/*
-    for (var j = 0; j<= 3; j++) {
-        
-        }  
-*/   
+//this has to be outside the function
+showMeQuestions();
 
-    
-for (var j = 0; j < 5; j++) {
-    if $(input:radio [questionArray[i].possibleAnswers[j]].checked) === (questionArray[i].correctAnswer) {
-        correctResponses++;
-    $ ("#correctResponses").text(correctResponses);
-    } else {
-        alert("Sorry, try again!");
-    }
-    }
+// for (var j = 0; j < 4; j++) {
+    $(".questionButtons").on("click", function(event) {
+        let userGuess = $(event.currentTarget).text();
+        console.log(event);
+        // if (userGuess === (questionArray[0].correctAnswer)) {
+        //     correctResponses++;
+        // $("#correctResponses").text(correctResponses);
+        // } 
+        // else {
+        //     alert("Sorry, try again!");
+        // }
+    })
+    // }
 })
-
-/*
-$("#questions").text("Your question is: " + questionArray.question1);
-    let option1 = questionArray.q1PossibleAnswers[0];
-    $("#option1").text(questionArray.q1PossibleAnswers[0]);
-    let option2 = questionArray.q1PossibleAnswers[1];
-    $("#option2").text(questionArray.q1PossibleAnswers[1]);
-    let option3 = questionArray.q1PossibleAnswers[2];
-    $("#option3").text(questionArray.q1PossibleAnswers[2]);
-    let option4 = questionArray.q1PossibleAnswers[3];
-    $("#option4").text(questionArray.q1PossibleAnswers[3]);
-    
-    $("#option1").on("click", function () {
-       if (option1 === questionArray.q1CorrectAnswer) {
-            $("#questions").text("Your question is: " + questionArray.question2);
-            console.log(option1);
-            $("#option1").text(questionArray.q2PossibleAnswers[0]);
-            let option1 = questionArray.q2PossibleAnswers[0];
-            $("#option2").text(questionArray.q2PossibleAnswers[1]);
-            let option2 = questionArray.q2PossibleAnswers[1];
-            $("#option3").text(questionArray.q2PossibleAnswers[2]);
-            let option3 = questionArray.q2PossibleAnswers[2];
-            $("#option4").text(questionArray.q2PossibleAnswers[3]);
-            let option4 = questionArray.q2PossibleAnswers[3];
-            correctResponses++;
-            $("#correctResponses").text(correctResponses);
-        }
-        else {
-            alert("Try again!");
-            console.log(this);
-            }
-        })
-
-   $("#option2").on("click", function () {
-       if (option2 === questionArray.q1CorrectAnswer) {
-            $("#questions").text("Your question is: " + questionArray.question2);
-            console.log(option1);
-            $("#option1").text(questionArray.q2PossibleAnswers[0]);
-            let option1 = questionArray.q2PossibleAnswers[0];
-            $("#option2").text(questionArray.q2PossibleAnswers[1]);
-            let option2 = questionArray.q2PossibleAnswers[1];
-            $("#option3").text(questionArray.q2PossibleAnswers[2]);
-            let option3 = questionArray.q2PossibleAnswers[2];
-            $("#option4").text(questionArray.q2PossibleAnswers[3]);
-            let option4 = questionArray.q2PossibleAnswers[3];
-            correctResponses++;
-            $("#correctResponses").text(correctResponses);
-        }
-        else {
-            alert("Try again!");
-            }
-        })
-
-    $("#option3").on("click", function () {
-        if (option3 === questionArray.q3CorrectAnswer) {
-            $("#questions").text("Your question is: " + questionArray.question4);
-            $("#option1").append(questionArray.q4PossibleAnswers[0]);
-            $("#option2").append(questionArray.q4PossibleAnswers[1]);
-            $("#option3").append(questionArray.q4PossibleAnswers[2]);
-            $("#option4").append(questionArray.q4PossibleAnswers[3]);
-            correctResponses++;
-        } else {
-            alert("Try again!");
-                }
-    })
-
-    $("#option4").on("click", function () {
-        if (questionArray.q4PossibleAnswers === questionArray.q4CorrectAnswer) {
-            $("#questions").text("Your question is: " + questionArray.question5);
-            $("#option1").append(questionArray.q5PossibleAnswers[0]);
-            $("#option2").append(questionArray.q5PossibleAnswers[1]);
-            $("#option3").append(questionArray.q5PossibleAnswers[2]);
-            $("#option4").append(questionArray.q5PossibleAnswers[3]);
-            correctResponses++;
-        } else {
-            alert("Try again!");
-                }
-    })
-
-    if (questionArray.q5PossibleAnswers === questionArray.q5CorrectAnswer) {
-        correctResponses++;
-    }
-        else {
-            alert("Try again!");
-        }
-*/
-
 
