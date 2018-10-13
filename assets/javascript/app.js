@@ -30,6 +30,10 @@ $("#start").on('click', function() {
     })
 
 $("#reset").on('click', function(){
+    timer =30;
+    questionProgress =0;
+    correctResponses =0;
+    showMeQuestions();
     run();
 })
 
@@ -81,7 +85,7 @@ function showMeQuestions() {
 //this has to be outside the function
 showMeQuestions();
 
-// for (var j = 0; j < 4; j++) {
+// for (var j = 0; j < 5; j++) {
     $(".questionButtons").on("click", function() {
         let userGuess = $(this).data("name");
         console.log(event);
