@@ -67,27 +67,29 @@ function showMeQuestions() {
     for (var i = 0; i <5; i++) {
         $("#questions").text("Your question is: " + questionArray[0].question);
         $("#button1").text(questionArray[0].possibleAnswers[0]);
-        $("#button1").attr("data", questionArray[0].possibleAnswers[0]);
+        $("#radioButton1").attr("data", questionArray[0].possibleAnswers[0]);
         $("#button2").text(questionArray[0].possibleAnswers[1]);
+        $("#radioButton2").attr("data", questionArray[0].possibleAnswers[1]);
         $("#button3").text(questionArray[0].possibleAnswers[2]);
-        $("#button3").attr("data", questionArray[0].possibleAnswers[2]);
+        $("#radioButton3").attr("data", questionArray[0].possibleAnswers[2]);
         $("#button4").text(questionArray[0].possibleAnswers[3]);
+        $("#radioButton4").attr("data", questionArray[0].possibleAnswers[3]);
     }
 }  
 //this has to be outside the function
 showMeQuestions();
 
 // for (var j = 0; j < 4; j++) {
-    $(".questionButtons").on("click", function(event) {
-        let userGuess = $(event.currentTarget).text();
+    $(".questionButtons").on("click", function() {
+        let userGuess = $(this).text();
         console.log(event);
-        // if (userGuess === (questionArray[0].correctAnswer)) {
-        //     correctResponses++;
-        // $("#correctResponses").text(correctResponses);
-        // } 
-        // else {
-        //     alert("Sorry, try again!");
-        // }
+        if (userGuess === (questionArray[0].correctAnswer)) {
+            correctResponses++;
+        $("#correctResponses").text(correctResponses);
+        } 
+        else {
+            alert("Sorry, try again!");
+        }
     })
     // }
 })
